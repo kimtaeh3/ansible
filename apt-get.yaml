@@ -1,5 +1,5 @@
 ---
-- hosts: homelab-tailscale-router	
+- hosts: debian
   become: yes
   become_method: sudo
   tasks:
