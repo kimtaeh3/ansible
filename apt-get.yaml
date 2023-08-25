@@ -3,9 +3,13 @@
   become: yes
   become_method: sudo
   tasks:
-  - name: "Update cache & Full system update"
+  - name: "Update cache"
     apt:
      update_cache: true
+     cache_valid_time: 3600
+     force_apt_get: true
+  - name: "Full system update"
+    apt:
      upgrade: dist
      cache_valid_time: 3600
      force_apt_get: true
